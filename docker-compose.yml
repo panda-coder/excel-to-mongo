@@ -1,0 +1,44 @@
+version: '3.8'
+
+networks:
+  frontend:
+    driver: ${NETWORKS_DRIVER}
+  backend:
+    driver: ${NETWORKS_DRIVER}
+
+volumes:
+  mongo:
+    driver: ${VOLUMES_DRIVER}
+  docker-in-docker:
+    driver: ${VOLUMES_DRIVER}
+
+services:
+  backend-excel-to-mongo:
+    build:
+      context: ./
+      dockerfile: ./backend/Dockerfile
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./:/usr/src/app
+    networks:
+      - backend
+
+  mongodb:
+    build:
+      context: ./mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+
+  mongo-gui:
+    container_name: "mongo-gui"
+    image: ugleiton/mongo-gui
+    restart: always
+    ports:
+      - "4321:4321"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017
+    networks:
+      - backend

@@ -38,7 +38,7 @@ class ExcelFile:
         return sha1.hexdigest()
 
     def to_dict(self):
-        return dict(name=self.name, hash=self.__has_file)
+        return dict(name=self.name, hash=self.__has_file, content=self.get_content())
 
     def __str__(self):
         return json.dumps(self.to_dict())
