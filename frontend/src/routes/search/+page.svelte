@@ -22,7 +22,7 @@
                 
                 {#each data.content as item, i}
                 <tr>
-                    <td>{item.file}</td>
+                    <td><a href="/file/{item.hash}">{item.file}</a></td>
                     <td>{item.line_number}</td>
                     <td>{item.ws_title}</td>
                     <td>{item.content}</td>
