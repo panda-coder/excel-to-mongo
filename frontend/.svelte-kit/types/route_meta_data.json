@@ -1,0 +1,7 @@
+{
+	"/": [],
+	"/search": [
+		"src/routes/search/+page.js"
+	],
+	"/upload": []
+}
