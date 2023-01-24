@@ -11,3 +11,34 @@ It's a project that focus in parse a XLSX and store data in mongodb
 - [X] Api to search data
 - [X] Frontend to search data
 
+## Quickstart
+
+### Running API
+
+#### Setup
+
+```bash
+cd backend/src
+pip install -r requirements.txt
+```
+
+#### Running backend application
+
+```bash
+python main.py
+```
+
+### Running Frontend
+
+#### Setup application
+
+```bash
+cd frontend
+npm i
+```
+
+#### Running frontend application
+
+```bash
+npm run dev
+```
