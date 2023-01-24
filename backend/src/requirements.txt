@@ -1,3 +1,4 @@
 pymongo
 openpyxl
 flask
+flask-cors
