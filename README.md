@@ -13,6 +13,13 @@ It's a project that focus in parse a XLSX and store data in mongodb
 
 ## Quickstart
 
+### Requirements
+
+- [ ] Docker (optional)
+- [ ] Python3.8+
+- [ ] Nodejs16+
+- [ ] Mongodb
+
 ### Running API
 
 #### Setup
